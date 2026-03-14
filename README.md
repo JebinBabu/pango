@@ -1,2 +1,2 @@
-# prokaryome
-prokaryome is a CLI tool for constructing prokaryotic pan/core genome and phylogenetic tree.
+# pango
+pango is a CLI tool for constructing pan/core genome and phylogenetic tree using python.
