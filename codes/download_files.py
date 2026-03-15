@@ -48,7 +48,6 @@ for acc in tqdm(accessions):
 
             new_file.write(response.content)
 
-            # print(f"Downloaded {acc}{file_types[args.type]}")
     else:
         print(f"Couldn't download {acc}{file_types[args.type]}, please check the accession or download manually")
 

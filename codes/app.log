@@ -1,0 +1,17 @@
+2026-03-15 15:28:54,478 - root - INFO - GCF_029536935.2_ASM2953693v2_cds_from_genomic vs GCF_054489665.1_ASM5448966v1_cds_from_genomic blasted successfully
+2026-03-15 15:28:58,673 - root - INFO - GCF_054489665.1_ASM5448966v1_cds_from_genomic vs GCF_029536935.2_ASM2953693v2_cds_from_genomic blasted successfully
+2026-03-15 15:32:00,501 - root - ERROR - Couldn't run BLAST on GCF_029536935.2_ASM2953693v2_cds_from_genomic vs GCF_054489665.1_ASM5448966v1_cds_from_genomic
+2026-03-15 15:32:03,589 - root - ERROR - Couldn't run BLAST on GCF_054489665.1_ASM5448966v1_cds_from_genomic vs GCF_029536935.2_ASM2953693v2_cds_from_genomic
+2026-03-15 15:32:44,572 - root - ERROR - Couldn't run BLAST on GCF_029536935.2_ASM2953693v2_cds_from_genomic vs GCF_054489665.1_ASM5448966v1_cds_from_genomic
+2026-03-15 15:32:44,572 - root - ERROR - Command line argument error: Argument "out". File is not accessible:  `../blastresults/GCF_029536935.2_ASM2953693v2_cds_from_genomic_vs_GCF_054489665.1_ASM5448966v1_cds_from_genomic'
+
+2026-03-15 15:32:47,815 - root - ERROR - Couldn't run BLAST on GCF_054489665.1_ASM5448966v1_cds_from_genomic vs GCF_029536935.2_ASM2953693v2_cds_from_genomic
+2026-03-15 15:32:47,815 - root - ERROR - Command line argument error: Argument "out". File is not accessible:  `../blastresults/GCF_054489665.1_ASM5448966v1_cds_from_genomic_vs_GCF_029536935.2_ASM2953693v2_cds_from_genomic'
+
+2026-03-15 15:35:14,599 - root - INFO - Running 2 BLASTs
+2026-03-15 15:35:17,595 - root - ERROR - Couldn't run BLAST on GCF_029536935.2_ASM2953693v2_cds_from_genomic vs GCF_054489665.1_ASM5448966v1_cds_from_genomic
+2026-03-15 15:35:17,595 - root - ERROR - Command line argument error: Argument "out". File is not accessible:  `../blastresults/GCF_029536935.2_ASM2953693v2_cds_from_genomic_vs_GCF_054489665.1_ASM5448966v1_cds_from_genomic'
+
+2026-03-15 15:35:20,802 - root - ERROR - Couldn't run BLAST on GCF_054489665.1_ASM5448966v1_cds_from_genomic vs GCF_029536935.2_ASM2953693v2_cds_from_genomic
+2026-03-15 15:35:20,802 - root - ERROR - Command line argument error: Argument "out". File is not accessible:  `../blastresults/GCF_054489665.1_ASM5448966v1_cds_from_genomic_vs_GCF_029536935.2_ASM2953693v2_cds_from_genomic'
+
