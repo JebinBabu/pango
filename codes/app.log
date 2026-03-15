@@ -18,3 +18,12 @@
 2026-03-15 23:41:23,190 - root - INFO - Parsing 0 .fna files
 2026-03-15 23:41:23,190 - root - INFO - Making temp folder
 2026-03-15 23:41:58,160 - root - INFO - Parsing 100 .fna files
+2026-03-15 23:49:08,558 - root - INFO - Running 2 BLASTs
+2026-03-15 23:49:12,651 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_019704475.1 successfully
+2026-03-15 23:49:16,979 - root - INFO - Ran BLAST on GCF_019704475.1 vs GCF_022700895.1 successfully
+2026-03-15 23:49:29,470 - root - INFO - Running 9900 BLASTs
+2026-03-15 23:49:33,733 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_019704475.1 successfully
+2026-03-15 23:49:37,795 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_004101365.1 successfully
+2026-03-15 23:49:41,748 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_026153475.1 successfully
+2026-03-15 23:49:45,791 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_009913275.1 successfully
+2026-03-15 23:49:49,810 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_019704355.1 successfully

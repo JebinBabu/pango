@@ -43,7 +43,7 @@ def run_blast(query, subject, out_file, threads=args.threads):
     return query, result.returncode, result.stderr
 
 
-fasta_files = glob.glob(args.inp + f"*{args.ext}")[:2]
+fasta_files = glob.glob(args.inp + f"*{args.ext}")
 
 total_blast_count = len(fasta_files)*(len(fasta_files) - 1)
 
