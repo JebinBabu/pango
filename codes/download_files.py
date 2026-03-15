@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import logging
 from tqdm import tqdm
 import requests
 import argparse
@@ -10,6 +11,10 @@ parser.add_argument("-t","--type", type=str, choices=["nucl","prot"], help="File
 parser.add_argument("-o","--out", type=str, help="Output folder", required=True)
 
 args = parser.parse_args()
+
+logging.basicConfig(filename='app.log', level=logging.DEBUG,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    filemode='a')
 
 accessions = []
 
@@ -25,7 +30,7 @@ with open(args.inp, "r") as infile:
 
 file_types = {"nucl":"_cds_from_genomic.fna.gz","prot":"_protein.faa.gz"}
 
-print(f"Downloading {len(accessions)} {args.type} files!")
+logging.info(f"Downloading {len(accessions)} {args.type} files!")
 
 count_not_down = 0
 
@@ -49,11 +54,11 @@ for acc in tqdm(accessions):
             new_file.write(response.content)
 
     else:
-        print(f"Couldn't download {acc}{file_types[args.type]}, please check the accession or download manually")
+        logging.warning(f"Couldn't download {acc}{file_types[args.type]}, please check the accession or download manually")
 
         count_not_down += 1
 
     if count_not_down > 0:
 
-        print(f"{count_not_down} files not downloaded!") 
+        logging.warning(f"{count_not_down} files not downloaded!") 
 

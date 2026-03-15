@@ -15,3 +15,6 @@
 2026-03-15 15:35:20,802 - root - ERROR - Couldn't run BLAST on GCF_054489665.1_ASM5448966v1_cds_from_genomic vs GCF_029536935.2_ASM2953693v2_cds_from_genomic
 2026-03-15 15:35:20,802 - root - ERROR - Command line argument error: Argument "out". File is not accessible:  `../blastresults/GCF_054489665.1_ASM5448966v1_cds_from_genomic_vs_GCF_029536935.2_ASM2953693v2_cds_from_genomic'
 
+2026-03-15 23:41:23,190 - root - INFO - Parsing 0 .fna files
+2026-03-15 23:41:23,190 - root - INFO - Making temp folder
+2026-03-15 23:41:58,160 - root - INFO - Parsing 100 .fna files
