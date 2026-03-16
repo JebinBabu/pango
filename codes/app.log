@@ -289,3 +289,4 @@
 2026-03-16 03:15:51,410 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_051904005.1.fna
 2026-03-16 03:19:17,998 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_006741845.1.fna
 2026-03-16 03:22:42,525 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_022370975.1.fna
+2026-03-16 22:45:10,892 - root - INFO - Filtered 2450 blastresults

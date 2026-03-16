@@ -5,12 +5,10 @@ import argparse
 import pandas as pd
 import glob
 from tqdm import tqdm
+import os
 parser = argparse.ArgumentParser(description="A script that downloads genome files from NCBI using the assembly accession numbers")
 
 parser.add_argument("-i","--inp", type=str, help="Input folder containing input fasta files", required=True)
-parser.add_argument("-e","--evalue", type=float, help="E-value cutoff", default=1e-5)
-parser.add_argument("-p","--pident", type=float, help="Percentage identity cutoff", default=75)
-parser.add_argument("-l","--len", type=float, help="Percentage length overlap cutoff", default=80)
 parser.add_argument("-c","--core_perc", type=float, help="Relaxed cutoff for core genome", default = 100)
 parser.add_argument("-o","--out", type=str, help="Output folder", required=True)
 
@@ -21,21 +19,34 @@ logging.basicConfig(filename='app.log', level=logging.DEBUG,
                     filemode='a')
 
 
-files = glob.glob(args.inp + "*.out")
+# Generating pre-pan genomes
 
-for file in tqdm(files):
+files = glob.glob(args.inp + "*_filtered.csv")
 
-    df = pd.read_csv(file, delimiter='\t',header=None)
-    df.columns = ['qseqid', 'sseqid', 'pident', 'length', 'qlen', 'evalue']
+# try:
+#     os.remove('../temp/all_paralogs.txt')
+# except:
+#     True
+    
+# for file in tqdm(files):
 
-    df1 = df[df['pident'] >= args.pident]
-    df1 = df1[df1['evalue'] <= args.evalue]
-    df1["len_cov"] = df1['length']/ df1['qlen']
-    df1 = df1[df1['len_cov'] >= args.len/100]
+#     gcf1, gcf2 = file.split("/")[-1].replace('_filtered.csv',"").split("_vs_")
+
+#     df = pd.read_csv(file)
+
+#     df['paralog'] = df.duplicated('qseqid')
+
+#     df_paralogs = df[df['paralog'] == True][['qseqid','sseqid']]
+
+#     df_paralogs[['qseqid']].to_csv('../temp/all_paralogs.txt', header=False, mode='a', index=None)
+#     df_paralogs[['qseqid']].to_csv('../temp/all_paralogs.txt', header=False, mode='a', index=None)
 
 
-    df1.to_csv(file.replace(".out","_filtered.csv"), index=None)
+all_paralogs = pd.read_csv('../temp/all_paralogs.txt',header=None)
+all_paralogs.drop_duplicates(inplace=True)
 
-logging.info(f"Filtered {len(files)} blastresults")
+all_paralogs.to_csv('../temp/all_paralogs.txt', header=False, index=None)
+
+
 
 
