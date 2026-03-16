@@ -34,3 +34,5 @@ for file in tqdm(files):
 
     df1.to_csv(file.replace(".out","_filtered.csv"), index=None)
 
+logging.info(f"Filtered {len(files)} blastresults")
+
