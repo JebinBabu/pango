@@ -37,7 +37,7 @@ def run_blast(query, subject, out_file, threads=args.threads):
     cmd_blast = [
         blast_type, "-query", str(query),
         "-db", subject, "-out", str(out_file),
-        "-outfmt", "6", "-num_threads", str(threads)
+        "-outfmt", "6 qseqid sseqid pident length qlen evalue", "-num_threads", str(threads)
     ]
     result = subprocess.run(cmd_blast, capture_output=True, text=True)
     return query, result.returncode, result.stderr
@@ -58,12 +58,14 @@ for file1 in tqdm(fasta_files):
         
         gcf1 = file1.split('/')[-1].replace(args.ext,"")
         gcf2 = file2.split('/')[-1].replace(args.ext,"")
-        blast_out_name = args.out + gcf1 + "_vs_" + gcf2
+        blast_out_name = args.out + gcf1 + "_vs_" + gcf2 + ".out"
 
         blast_status = run_blast(file1, file2, blast_out_name)
 
-        if blast_status[1] == 0:
-            logging.info(f"Ran BLAST on {gcf1} vs {gcf2} successfully")
-        else:
+        if blast_status[1] != 0:
+            
             logging.error(f"Couldn't run BLAST on {gcf1} vs {gcf2}")
             logging.error(f"{blast_status[2]}")
+
+    
+    logging.info(f"Ran BLAST on all vs {file1}")
