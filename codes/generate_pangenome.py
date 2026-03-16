@@ -11,6 +11,8 @@ parser.add_argument("-i","--inp", type=str, help="Input folder containing input 
 parser.add_argument("-e","--evalue", type=float, help="E-value cutoff", default=1e-5)
 parser.add_argument("-p","--pident", type=float, help="Percentage identity cutoff", default=75)
 parser.add_argument("-l","--len", type=float, help="Percentage length overlap cutoff", default=80)
+parser.add_argument("-c","--core_perc", type=float, help="Relaxed cutoff for core genome", default = 100)
+parser.add_argument("-o","--out", type=str, help="Output folder", required=True)
 
 args = parser.parse_args()
 
@@ -35,4 +37,5 @@ for file in tqdm(files):
     df1.to_csv(file.replace(".out","_filtered.csv"), index=None)
 
 logging.info(f"Filtered {len(files)} blastresults")
+
 
