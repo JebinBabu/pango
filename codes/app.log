@@ -27,3 +27,265 @@
 2026-03-15 23:49:41,748 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_026153475.1 successfully
 2026-03-15 23:49:45,791 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_009913275.1 successfully
 2026-03-15 23:49:49,810 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_019704355.1 successfully
+2026-03-15 23:49:54,047 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_050847335.1 successfully
+2026-03-15 23:49:58,207 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_022647025.1 successfully
+2026-03-15 23:50:02,410 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_047120225.1 successfully
+2026-03-15 23:50:06,538 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_052120895.1 successfully
+2026-03-15 23:50:10,631 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_051028965.1 successfully
+2026-03-15 23:50:14,700 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_002055965.1 successfully
+2026-03-15 23:50:18,928 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_019931715.1 successfully
+2026-03-15 23:50:23,198 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_027912355.1 successfully
+2026-03-15 23:50:27,237 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_052783415.1 successfully
+2026-03-15 23:50:31,520 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_032878855.1 successfully
+2026-03-15 23:50:35,713 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_052119875.1 successfully
+2026-03-15 23:50:39,790 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_000009045.1 successfully
+2026-03-15 23:50:43,785 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_030643845.1 successfully
+2026-03-15 23:50:47,905 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_018884165.1 successfully
+2026-03-15 23:50:51,875 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_022700935.1 successfully
+2026-03-15 23:50:55,992 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_030847885.1 successfully
+2026-03-15 23:51:00,090 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_054065575.1 successfully
+2026-03-15 23:51:04,148 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_022453545.1 successfully
+2026-03-15 23:51:08,544 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_052077915.1 successfully
+2026-03-15 23:51:12,478 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_039621415.1 successfully
+2026-03-15 23:51:16,603 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_001697265.1 successfully
+2026-03-15 23:51:20,773 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_000344745.1 successfully
+2026-03-15 23:51:24,939 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_002269195.1 successfully
+2026-03-15 23:51:29,170 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_030053655.1 successfully
+2026-03-15 23:51:33,523 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_054489665.1 successfully
+2026-03-15 23:51:37,584 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_025161015.1 successfully
+2026-03-15 23:51:41,559 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_014879275.1 successfully
+2026-03-15 23:51:45,757 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_022700955.1 successfully
+2026-03-15 23:51:49,703 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_034258595.1 successfully
+2026-03-15 23:51:53,705 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_023078435.1 successfully
+2026-03-15 23:51:57,942 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_030028395.1 successfully
+2026-03-15 23:52:02,111 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_051515105.1 successfully
+2026-03-15 23:52:06,006 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_046267835.1 successfully
+2026-03-15 23:52:10,183 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_029537415.2 successfully
+2026-03-15 23:52:14,142 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_001604995.1 successfully
+2026-03-15 23:52:18,187 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_039621185.1 successfully
+2026-03-15 23:52:22,237 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_001704095.1 successfully
+2026-03-15 23:52:26,398 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_009913515.1 successfully
+2026-03-15 23:52:30,401 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_021398545.1 successfully
+2026-03-15 23:52:34,467 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_053570475.1 successfully
+2026-03-15 23:52:38,363 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_009662435.1 successfully
+2026-03-15 23:52:42,669 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_016065415.1 successfully
+2026-03-15 23:52:47,090 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_052119865.1 successfully
+2026-03-15 23:52:51,488 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_009662415.1 successfully
+2026-03-15 23:52:55,610 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_030053795.1 successfully
+2026-03-15 23:52:59,544 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_000789295.1 successfully
+2026-03-15 23:53:03,877 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_032680865.1 successfully
+2026-03-15 23:53:08,259 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_024752515.1 successfully
+2026-03-15 23:53:12,386 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_003610955.1 successfully
+2026-03-16 00:08:02,495 - root - INFO - Running 9900 BLASTs
+2026-03-16 00:08:06,717 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_019704475.1 successfully
+2026-03-16 00:08:10,952 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_004101365.1 successfully
+2026-03-16 00:08:15,216 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_026153475.1 successfully
+2026-03-16 00:08:19,312 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_009913275.1 successfully
+2026-03-16 00:08:23,768 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_019704355.1 successfully
+2026-03-16 00:08:28,390 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_050847335.1 successfully
+2026-03-16 00:08:32,941 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_022647025.1 successfully
+2026-03-16 00:08:36,843 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_047120225.1 successfully
+2026-03-16 00:08:40,821 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_052120895.1 successfully
+2026-03-16 00:08:45,020 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_051028965.1 successfully
+2026-03-16 00:08:49,027 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_002055965.1 successfully
+2026-03-16 00:08:53,232 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_019931715.1 successfully
+2026-03-16 00:08:57,486 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_027912355.1 successfully
+2026-03-16 00:09:01,573 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_052783415.1 successfully
+2026-03-16 00:09:05,801 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_032878855.1 successfully
+2026-03-16 00:09:09,915 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_052119875.1 successfully
+2026-03-16 00:09:13,994 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_000009045.1 successfully
+2026-03-16 00:09:19,168 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_030643845.1 successfully
+2026-03-16 00:09:23,245 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_018884165.1 successfully
+2026-03-16 00:09:27,374 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_022700935.1 successfully
+2026-03-16 00:09:31,380 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_030847885.1 successfully
+2026-03-16 00:09:35,415 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_054065575.1 successfully
+2026-03-16 00:09:39,566 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_022453545.1 successfully
+2026-03-16 00:09:43,667 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_052077915.1 successfully
+2026-03-16 00:09:47,888 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_039621415.1 successfully
+2026-03-16 00:09:51,903 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_001697265.1 successfully
+2026-03-16 00:09:56,223 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_000344745.1 successfully
+2026-03-16 00:10:00,311 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_002269195.1 successfully
+2026-03-16 00:10:04,625 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_030053655.1 successfully
+2026-03-16 00:10:08,685 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_054489665.1 successfully
+2026-03-16 00:10:12,723 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_025161015.1 successfully
+2026-03-16 00:10:16,827 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_014879275.1 successfully
+2026-03-16 00:12:20,765 - root - INFO - Running 9900 BLASTs
+2026-03-16 00:12:24,967 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_019704475.1 successfully
+2026-03-16 00:12:28,884 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_004101365.1 successfully
+2026-03-16 00:12:33,055 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_026153475.1 successfully
+2026-03-16 00:12:37,245 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_009913275.1 successfully
+2026-03-16 00:12:41,452 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_019704355.1 successfully
+2026-03-16 00:12:45,650 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_050847335.1 successfully
+2026-03-16 00:12:49,849 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_022647025.1 successfully
+2026-03-16 00:12:54,012 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_047120225.1 successfully
+2026-03-16 00:12:57,969 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_052120895.1 successfully
+2026-03-16 00:13:01,999 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_051028965.1 successfully
+2026-03-16 00:13:06,010 - root - INFO - Ran BLAST on GCF_022700895.1 vs GCF_002055965.1 successfully
+2026-03-16 00:14:39,254 - root - INFO - Downloading 51 nucl files!
+2026-03-16 00:14:39,269 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:14:40,522 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/GCF_000009045.1_ASM904v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1516612
+2026-03-16 00:14:43,181 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:14:44,120 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/029/537/415/GCF_029537415.2_ASM2953741v2/GCF_029537415.2_ASM2953741v2_cds_from_genomic.fna.gz HTTP/1.1" 200 1383569
+2026-03-16 00:14:48,257 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:14:49,085 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/002/055/965/GCF_002055965.1_ASM205596v1/GCF_002055965.1_ASM205596v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1383558
+2026-03-16 00:14:51,291 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:14:52,265 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/001/697/265/GCF_001697265.1_ASM169726v1/GCF_001697265.1_ASM169726v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1356986
+2026-03-16 00:14:57,572 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:14:58,382 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/006/741/845/GCF_006741845.1_ASM674184v1/GCF_006741845.1_ASM674184v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1382987
+2026-03-16 00:15:01,607 - root - INFO - Downloading 50 nucl files!
+2026-03-16 00:15:01,619 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:15:02,552 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/GCF_000009045.1_ASM904v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1516612
+2026-03-16 00:15:07,328 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:15:08,162 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/029/537/415/GCF_029537415.2_ASM2953741v2/GCF_029537415.2_ASM2953741v2_cds_from_genomic.fna.gz HTTP/1.1" 200 1383569
+2026-03-16 00:15:10,647 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:15:11,497 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/002/055/965/GCF_002055965.1_ASM205596v1/GCF_002055965.1_ASM205596v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1383558
+2026-03-16 00:15:14,640 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:15:15,517 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/001/697/265/GCF_001697265.1_ASM169726v1/GCF_001697265.1_ASM169726v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1356986
+2026-03-16 00:15:17,737 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:15:18,735 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/006/741/845/GCF_006741845.1_ASM674184v1/GCF_006741845.1_ASM674184v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1382987
+2026-03-16 00:15:23,963 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:15:24,934 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/000/344/745/GCF_000344745.1_ASM34474v1/GCF_000344745.1_ASM34474v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1357860
+2026-03-16 00:15:27,120 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:15:27,986 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/047/273/435/GCF_047273435.1_ASM4727343v1/GCF_047273435.1_ASM4727343v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1457184
+2026-03-16 00:15:32,116 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:15:33,040 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/051/904/005/GCF_051904005.1_ASM5190400v1/GCF_051904005.1_ASM5190400v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1457233
+2026-03-16 00:15:35,584 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:15:36,390 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/041/053/155/GCF_041053155.1_ASM4105315v1/GCF_041053155.1_ASM4105315v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1443856
+2026-03-16 00:15:38,762 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:15:39,651 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/039/620/435/GCF_039620435.1_ASM3962043v1/GCF_039620435.1_ASM3962043v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1476945
+2026-03-16 00:15:42,333 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:15:43,193 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/039/621/185/GCF_039621185.1_ASM3962118v1/GCF_039621185.1_ASM3962118v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1469007
+2026-03-16 00:15:47,605 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:15:48,530 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/039/621/415/GCF_039621415.1_ASM3962141v1/GCF_039621415.1_ASM3962141v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1477160
+2026-03-16 00:15:51,746 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:15:52,597 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/026/153/475/GCF_026153475.1_ASM2615347v1/GCF_026153475.1_ASM2615347v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1404707
+2026-03-16 00:15:58,002 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:15:58,821 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/905/310/975/GCF_905310975.2_NRS6085B/GCF_905310975.2_NRS6085B_cds_from_genomic.fna.gz HTTP/1.1" 200 1397997
+2026-03-16 00:16:01,206 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:16:02,027 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/030/053/655/GCF_030053655.1_ASM3005365v1/GCF_030053655.1_ASM3005365v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1398164
+2026-03-16 00:16:04,363 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:16:05,270 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/027/942/395/GCF_027942395.1_ASM2794239v1/GCF_027942395.1_ASM2794239v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1384342
+2026-03-16 00:16:08,216 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:16:09,052 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/023/612/315/GCF_023612315.1_ASM2361231v1/GCF_023612315.1_ASM2361231v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1381070
+2026-03-16 00:16:11,497 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:16:12,368 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/009/913/275/GCF_009913275.1_ASM991327v1/GCF_009913275.1_ASM991327v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1383890
+2026-03-16 00:16:14,861 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:16:15,733 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/051/028/965/GCF_051028965.1_ASM5102896v1/GCF_051028965.1_ASM5102896v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1374315
+2026-03-16 00:16:18,125 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:16:18,946 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/032/878/855/GCF_032878855.1_ASM3287885v1/GCF_032878855.1_ASM3287885v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1430798
+2026-03-16 00:16:21,625 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:16:22,526 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/029/536/935/GCF_029536935.2_ASM2953693v2/GCF_029536935.2_ASM2953693v2_cds_from_genomic.fna.gz HTTP/1.1" 200 1382319
+2026-03-16 00:16:25,344 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:16:26,177 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/027/912/355/GCF_027912355.1_ASM2791235v1/GCF_027912355.1_ASM2791235v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1378470
+2026-03-16 00:16:29,862 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:16:30,882 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/025/161/015/GCF_025161015.1_ASM2516101v1/GCF_025161015.1_ASM2516101v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1377026
+2026-03-16 00:16:34,917 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:16:35,757 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/051/028/755/GCF_051028755.1_ASM5102875v1/GCF_051028755.1_ASM5102875v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1373897
+2026-03-16 00:16:39,692 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:16:40,618 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/029/857/415/GCF_029857415.2_DSM3257/GCF_029857415.2_DSM3257_cds_from_genomic.fna.gz HTTP/1.1" 200 1379651
+2026-03-16 00:16:43,840 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:16:44,746 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/022/647/025/GCF_022647025.1_ASM2264702v1/GCF_022647025.1_ASM2264702v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1411014
+2026-03-16 00:16:47,275 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:16:48,216 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/022/370/975/GCF_022370975.1_ASM2237097v1/GCF_022370975.1_ASM2237097v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1374265
+2026-03-16 00:16:50,730 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:16:51,606 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/009/662/175/GCF_009662175.1_ASM966217v1/GCF_009662175.1_ASM966217v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1369815
+2026-03-16 00:16:56,692 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:16:57,583 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/030/028/395/GCF_030028395.1_ASM3002839v1/GCF_030028395.1_ASM3002839v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1379423
+2026-03-16 00:17:05,422 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:17:06,248 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/000/953/615/GCF_000953615.1_BS49Ch/GCF_000953615.1_BS49Ch_cds_from_genomic.fna.gz HTTP/1.1" 200 1369660
+2026-03-16 00:17:08,483 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:17:09,410 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/028/748/025/GCF_028748025.1_ASM2874802v1/GCF_028748025.1_ASM2874802v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1367898
+2026-03-16 00:17:11,851 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:17:12,728 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/021/172/185/GCF_021172185.1_ASM2117218v1/GCF_021172185.1_ASM2117218v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1425423
+2026-03-16 00:17:18,045 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:17:18,988 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/047/758/065/GCF_047758065.1_ASM4775806v1/GCF_047758065.1_ASM4775806v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1365807
+2026-03-16 00:17:21,329 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:17:22,274 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/047/758/345/GCF_047758345.1_ASM4775834v1/GCF_047758345.1_ASM4775834v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1366779
+2026-03-16 00:17:28,200 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:17:29,029 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/024/799/885/GCF_024799885.1_ASM2479988v1/GCF_024799885.1_ASM2479988v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1366126
+2026-03-16 00:17:31,407 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:17:32,248 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/030/123/145/GCF_030123145.1_ASM3012314v1/GCF_030123145.1_ASM3012314v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1367154
+2026-03-16 00:17:34,696 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:17:35,580 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/001/704/095/GCF_001704095.1_ASM170409v1/GCF_001704095.1_ASM170409v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1362948
+2026-03-16 00:17:37,983 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:17:38,812 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/000/952/895/GCF_000952895.1_BS34ACh/GCF_000952895.1_BS34ACh_cds_from_genomic.fna.gz HTTP/1.1" 200 1363838
+2026-03-16 00:17:43,853 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:17:44,737 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/022/453/545/GCF_022453545.1_ASM2245354v1/GCF_022453545.1_ASM2245354v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1358150
+2026-03-16 00:17:47,167 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:17:48,098 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/044/499/385/GCF_044499385.1_ASM4449938v1/GCF_044499385.1_ASM4449938v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1363221
+2026-03-16 00:17:52,340 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:17:53,251 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/004/119/775/GCF_004119775.1_ASM411977v1/GCF_004119775.1_ASM411977v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1401643
+2026-03-16 00:17:56,336 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:17:57,301 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/030/643/845/GCF_030643845.1_ASM3064384v1/GCF_030643845.1_ASM3064384v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1362525
+2026-03-16 00:17:59,604 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:18:00,483 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/029/536/975/GCF_029536975.1_ASM2953697v2/GCF_029536975.1_ASM2953697v2_cds_from_genomic.fna.gz HTTP/1.1" 200 1381321
+2026-03-16 00:18:03,309 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:18:04,237 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/009/662/195/GCF_009662195.1_ASM966219v1/GCF_009662195.1_ASM966219v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1359983
+2026-03-16 00:18:06,654 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:18:07,533 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/009/662/255/GCF_009662255.1_ASM966225v1/GCF_009662255.1_ASM966225v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1357970
+2026-03-16 00:18:10,318 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:18:11,137 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/021/398/545/GCF_021398545.1_ASM2139854v1/GCF_021398545.1_ASM2139854v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1357550
+2026-03-16 00:18:13,630 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:18:14,514 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/023/078/435/GCF_023078435.1_ASM2307843v1/GCF_023078435.1_ASM2307843v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1359237
+2026-03-16 00:18:17,113 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:18:17,921 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/053/291/885/GCF_053291885.1_ASM5329188v1/GCF_053291885.1_ASM5329188v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1359985
+2026-03-16 00:18:20,946 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:18:21,886 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/026/410/045/GCF_026410045.1_ASM2641004v1/GCF_026410045.1_ASM2641004v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1357904
+2026-03-16 00:18:24,873 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ftp.ncbi.nlm.nih.gov:443
+2026-03-16 00:18:25,740 - urllib3.connectionpool - DEBUG - https://ftp.ncbi.nlm.nih.gov:443 "GET /genomes/all/GCF/009/363/835/GCF_009363835.1_ASM936383v1/GCF_009363835.1_ASM936383v1_cds_from_genomic.fna.gz HTTP/1.1" 200 1360310
+2026-03-16 00:18:56,365 - root - INFO - Parsing 0 .fna files
+2026-03-16 00:19:17,074 - root - INFO - Parsing 50 .fna files
+2026-03-16 00:20:15,215 - root - INFO - Running 2450 BLASTs
+2026-03-16 00:23:37,679 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_026153475.1.fna
+2026-03-16 00:27:00,130 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_009913275.1.fna
+2026-03-16 00:28:23,283 - root - INFO - Running 2450 BLASTs
+2026-03-16 00:32:11,870 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_026153475.1.fna
+2026-03-16 00:35:36,565 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_009913275.1.fna
+2026-03-16 00:39:02,113 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_022647025.1.fna
+2026-03-16 00:42:30,993 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_051028965.1.fna
+2026-03-16 00:45:55,225 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_002055965.1.fna
+2026-03-16 00:49:19,737 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_027912355.1.fna
+2026-03-16 00:52:43,499 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_032878855.1.fna
+2026-03-16 00:56:06,451 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_000009045.1.fna
+2026-03-16 00:59:30,236 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_030643845.1.fna
+2026-03-16 01:02:57,720 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_022453545.1.fna
+2026-03-16 01:06:29,344 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_039621415.1.fna
+2026-03-16 01:09:55,428 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_001697265.1.fna
+2026-03-16 01:13:26,053 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_000344745.1.fna
+2026-03-16 01:16:57,819 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_030053655.1.fna
+2026-03-16 01:20:30,098 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_025161015.1.fna
+2026-03-16 01:24:01,457 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_023078435.1.fna
+2026-03-16 01:27:37,485 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_030028395.1.fna
+2026-03-16 01:31:09,058 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_029537415.2.fna
+2026-03-16 01:34:47,602 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_039621185.1.fna
+2026-03-16 01:38:22,058 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_001704095.1.fna
+2026-03-16 01:41:54,057 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_021398545.1.fna
+2026-03-16 01:45:26,278 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_000952895.1.fna
+2026-03-16 01:49:04,107 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_051028755.1.fna
+2026-03-16 01:52:37,063 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_009662195.1.fna
+2026-03-16 01:56:09,915 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_047758345.1.fna
+2026-03-16 01:59:41,871 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_029857415.2.fna
+2026-03-16 02:03:14,825 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_004119775.1.fna
+2026-03-16 02:06:48,435 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_029536975.1.fna
+2026-03-16 02:10:21,184 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_029536935.2.fna
+2026-03-16 02:13:55,566 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_023612315.1.fna
+2026-03-16 02:17:31,196 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_024799885.1.fna
+2026-03-16 02:21:02,883 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_009662255.1.fna
+2026-03-16 02:24:35,380 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_030123145.1.fna
+2026-03-16 02:28:02,312 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_905310975.2.fna
+2026-03-16 02:31:25,132 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_053291885.1.fna
+2026-03-16 02:34:49,002 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_044499385.1.fna
+2026-03-16 02:38:13,445 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_028748025.1.fna
+2026-03-16 02:41:37,869 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_027942395.1.fna
+2026-03-16 02:45:02,969 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_021172185.1.fna
+2026-03-16 02:48:27,470 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_047758065.1.fna
+2026-03-16 02:51:56,542 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_039620435.1.fna
+2026-03-16 02:55:18,064 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_026410045.1.fna
+2026-03-16 02:58:45,347 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_009662175.1.fna
+2026-03-16 03:02:08,208 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_009363835.1.fna
+2026-03-16 03:05:34,300 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_041053155.1.fna
+2026-03-16 03:09:01,880 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_047273435.1.fna
+2026-03-16 03:12:25,913 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_000953615.1.fna
+2026-03-16 03:15:51,410 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_051904005.1.fna
+2026-03-16 03:19:17,998 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_006741845.1.fna
+2026-03-16 03:22:42,525 - root - INFO - Ran BLAST on all vs ../genome_files_parsed/GCF_022370975.1.fna

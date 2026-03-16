@@ -26,7 +26,8 @@ with open(args.inp, "r") as infile:
 
         line = line.replace("\n","")
 
-        accessions.append(line)
+        if len(line) > 0:
+            accessions.append(line)
 
 file_types = {"nucl":"_cds_from_genomic.fna.gz","prot":"_protein.faa.gz"}
 
