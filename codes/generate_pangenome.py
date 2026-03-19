@@ -18,35 +18,56 @@ logging.basicConfig(filename='app.log', level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     filemode='a')
 
+try:
+    os.mkdir('../temp/pre_pangenomes/')
+except:
+    True
 
 # Generating pre-pan genomes
 
-files = glob.glob(args.inp + "*_filtered.csv")
+all_genomes_list = pd.read_csv('../temp/all_genomes.txt', header=None)[0].values.tolist()
+all_proteins_list = pd.read_csv('../temp/all_proteins.txt', header=None)[0]
 
-# try:
-#     os.remove('../temp/all_paralogs.txt')
-# except:
-#     True
+df_all_duplicates = pd.DataFrame()
+
+for gcf1 in all_genomes_list:
+
+    pre_pangenome = pd.DataFrame()
+
+    for gcf2 in all_genomes_list:
+
+        if gcf1 == gcf2: 
+            continue
+
+        df_blast1 = pd.read_csv(f'{args.inp}{gcf1}_vs_{gcf2}_filtered.csv')[['qseqid','sseqid']]
+        df_blast1.columns = [gcf1, gcf2]
+        df_blast2 = pd.read_csv(f'{args.inp}{gcf2}_vs_{gcf1}_filtered.csv')[['qseqid','sseqid']]
+        df_blast2.columns = [gcf2, gcf1]
+
+        df_overlap = pd.merge(df_blast1, df_blast2, on=[gcf1, gcf2], how='inner')
+
+        # print(df_overlap.shape)
+
+
+        df_duplicated = df_overlap[df_overlap[gcf1].duplicated()]
+
+        # print(df_duplicated.shape)
+
+        df_final = df_overlap[~df_overlap[gcf1].isin(df_duplicated[gcf1])]
+
+
+        # print(df_final.shape)
+        if pre_pangenome.shape[1] == 0:
+
+            pre_pangenome = df_final.copy()
+
+        else:
+
+            pre_pangenome = pd.merge(pre_pangenome, df_final, on=gcf1, how="left")
+
+
+    pre_pangenome.to_csv(f'../temp/pre_pangenomes/{gcf1}.csv', index=None)
+
+
+
     
-# for file in tqdm(files):
-
-#     gcf1, gcf2 = file.split("/")[-1].replace('_filtered.csv',"").split("_vs_")
-
-#     df = pd.read_csv(file)
-
-#     df['paralog'] = df.duplicated('qseqid')
-
-#     df_paralogs = df[df['paralog'] == True][['qseqid','sseqid']]
-
-#     df_paralogs[['qseqid']].to_csv('../temp/all_paralogs.txt', header=False, mode='a', index=None)
-#     df_paralogs[['qseqid']].to_csv('../temp/all_paralogs.txt', header=False, mode='a', index=None)
-
-
-all_paralogs = pd.read_csv('../temp/all_paralogs.txt',header=None)
-all_paralogs.drop_duplicates(inplace=True)
-
-all_paralogs.to_csv('../temp/all_paralogs.txt', header=False, index=None)
-
-
-
-
