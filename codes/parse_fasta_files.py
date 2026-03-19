@@ -27,7 +27,7 @@ try:
 except:
     True
 
-with open("../temp/all_proteins.txt",'w') as all_proteins:
+with open("../temp/all_proteins.txt",'w') as all_proteins, open("../temp/all_genomes.txt",'w') as all_genomes:
 
     all_proteins.write(f'filename, protein_new_name, details\n')
 
@@ -35,6 +35,8 @@ with open("../temp/all_proteins.txt",'w') as all_proteins:
 
         gcf = file.split('/')[-1].replace(args.ext,'')
         gcf_spliced = "_".join(gcf.split('_')[:2])
+
+        all_genomes.write(f"{gcf_spliced}\n")
 
         with open(file,'r') as infile, open(f"{args.out}{gcf_spliced}{args.ext}",'w') as outfile:
 
