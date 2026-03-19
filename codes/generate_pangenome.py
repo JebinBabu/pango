@@ -23,14 +23,16 @@ try:
 except:
     True
 
+with open('../temp/all_duplicates.csv','w') as dup_file:
+    dup_file.write('')    
+
 # Generating pre-pan genomes
 
-all_genomes_list = pd.read_csv('../temp/all_genomes.txt', header=None)[0].values.tolist()
+all_genomes_list = pd.read_csv('../temp/all_genomes.txt', header=None)[0].values.tolist()[:5]
 all_proteins_list = pd.read_csv('../temp/all_proteins.txt', header=None)[0]
 
-df_all_duplicates = pd.DataFrame()
 
-for gcf1 in all_genomes_list:
+for gcf1 in tqdm(all_genomes_list):
 
     pre_pangenome = pd.DataFrame()
 
@@ -46,17 +48,14 @@ for gcf1 in all_genomes_list:
 
         df_overlap = pd.merge(df_blast1, df_blast2, on=[gcf1, gcf2], how='inner')
 
-        # print(df_overlap.shape)
-
-
         df_duplicated = df_overlap[df_overlap[gcf1].duplicated()]
-
-        # print(df_duplicated.shape)
 
         df_final = df_overlap[~df_overlap[gcf1].isin(df_duplicated[gcf1])]
 
+        df_duplicated.columns = ['x','y']
+        df_duplicated.to_csv('../temp/all_duplicates.csv',header=None, index=None,mode='a')
 
-        # print(df_final.shape)
+        
         if pre_pangenome.shape[1] == 0:
 
             pre_pangenome = df_final.copy()
@@ -65,9 +64,39 @@ for gcf1 in all_genomes_list:
 
             pre_pangenome = pd.merge(pre_pangenome, df_final, on=gcf1, how="left")
 
-
+    pre_pangenome = pre_pangenome[all_genomes_list]
     pre_pangenome.to_csv(f'../temp/pre_pangenomes/{gcf1}.csv', index=None)
 
 
+# arranging protein families
 
-    
+protein_families = []
+
+for gcf in all_genomes_list:
+
+    df_pre_pan = pd.read_csv(f'../temp/pre_pangenomes/{gcf}.csv',header=None)
+    df_pre_pan = df_pre_pan.iloc[1:]
+
+    if len(protein_families) == 0:
+
+        protein_families = df_pre_pan.values.tolist()
+
+    else:
+
+        for new_protein_family in tqdm(df_pre_pan.values.tolist()):
+
+            for protein_family_id, existing_protein_families in enumerate(protein_families):
+
+                new_fam_set = set(new_protein_family)
+                existing_fam_set = set(existing_protein_families)
+
+                if len(new_fam_set.intersection(existing_fam_set)) >= 2:
+
+                    protein_families[protein_family_id] = list(new_fam_set.union(existing_fam_set))
+
+                    break
+
+
+print(protein_families)
+
+
