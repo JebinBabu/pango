@@ -3,7 +3,6 @@
 import logging
 import argparse
 import pandas as pd
-import glob
 from tqdm import tqdm
 import os
 parser = argparse.ArgumentParser(description="A script that downloads genome files from NCBI using the assembly accession numbers")
@@ -28,7 +27,7 @@ with open('../temp/all_duplicates.csv','w') as dup_file:
 
 # Generating pre-pan genomes
 
-all_genomes_list = pd.read_csv('../temp/all_genomes.txt', header=None)[0].values.tolist()[:10]
+all_genomes_list = pd.read_csv('../temp/all_genomes.txt', header=None)[0].values.tolist()[:5]
 all_proteins_list = pd.read_csv('../temp/all_proteins.txt', header=None)[0]
 
 
@@ -68,55 +67,55 @@ for gcf1 in tqdm(all_genomes_list):
     pre_pangenome.to_csv(f'../temp/pre_pangenomes/{gcf1}.csv', index=None)
 
 
-# arranging protein families
+# Compiling pre-pangenomes
 
-# protein_families = []
-
-# for gcf in tqdm(all_genomes_list):
-
-#     df_pre_pan = pd.read_csv(f'../temp/pre_pangenomes/{gcf}.csv',header=None)
-#     df_pre_pan = df_pre_pan.iloc[1:]
-
-#     if len(protein_families) == 0:
-
-#         protein_families = df_pre_pan.values.tolist()
-
-#     else:
-
-#         for new_protein_family in df_pre_pan.values.tolist():
-
-#             for protein_family_id, existing_protein_families in enumerate(protein_families):
-
-#                 new_fam_set = set(new_protein_family)
-#                 existing_fam_set = set(existing_protein_families)
-
-#                 if len(new_fam_set.intersection(existing_fam_set)) >= 2:
-
-#                     protein_families[protein_family_id] = list(new_fam_set.union(existing_fam_set))
-
-#                     break
-
-            
-#             protein_families.append(new_protein_family)
-
-df_pangenome = pd.DataFrame()
+df_final_pre_pangenome = pd.DataFrame()
 
 for gcf in all_genomes_list:
 
     df_pre_pan = pd.read_csv(f'../temp/pre_pangenomes/{gcf}.csv')
 
-    if df_pangenome.shape[0] == 0:
+    if df_final_pre_pangenome.shape[0] == 0:
 
-        df_pangenome = df_pre_pan.copy()
+        df_final_pre_pangenome = df_pre_pan.copy()
         
 
     else:
 
-        df_pangenome = pd.merge(df_pangenome, df_pre_pan, on=all_genomes_list, how='outer')
+        df_final_pre_pangenome = pd.merge(df_final_pre_pangenome, df_pre_pan, on=all_genomes_list, how='outer')
+
+df_final_pre_pangenome.to_csv('../temp/pre_pangenomes/final_pre_pangenome.csv',index=None)
+
+# Adding paralogs
+
+df_final_pre_pangenome = pd.read_csv('../temp/pre_pangenomes/final_pre_pangenome.csv',header=None)
+df_final_pre_pangenome = df_final_pre_pangenome.iloc[1:]
+
+protein_families = df_final_pre_pangenome.values.tolist()
+protein_families = [j for j in protein_families if str(j) != 'nan']
 
 
-df_pangenome.to_csv(f'{args.out}pan.csv',index=None)
 
+df_all_duplicates = pd.read_csv('../temp/all_duplicates.csv',header=None)
+all_duplicates_list = df_all_duplicates.values.tolist()
+
+
+for duplicate_pair in tqdm(all_duplicates_list):
+
+    duplicate_pair_set = set(duplicate_pair)
+
+    for protein_fam_id, protein_fam in enumerate(protein_families):
+
+        protein_fam_set = set(protein_fam)
+
+        if len(protein_fam_set.intersection(duplicate_pair_set)) >= 1:
+            
+            protein_families[protein_fam_id] = list(protein_fam_set.union(duplicate_pair_set))
+
+            
+df_pangenome = pd.DataFrame(protein_families) 
+
+df_pangenome.to_csv('../pan.csv',index=None)
 
 
 
