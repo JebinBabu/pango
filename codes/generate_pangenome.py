@@ -28,7 +28,7 @@ with open('../temp/all_duplicates.csv','w') as dup_file:
 
 # Generating pre-pan genomes
 
-all_genomes_list = pd.read_csv('../temp/all_genomes.txt', header=None)[0].values.tolist()[:5]
+all_genomes_list = pd.read_csv('../temp/all_genomes.txt', header=None)[0].values.tolist()[:10]
 all_proteins_list = pd.read_csv('../temp/all_proteins.txt', header=None)[0]
 
 
@@ -70,33 +70,53 @@ for gcf1 in tqdm(all_genomes_list):
 
 # arranging protein families
 
-protein_families = []
+# protein_families = []
+
+# for gcf in tqdm(all_genomes_list):
+
+#     df_pre_pan = pd.read_csv(f'../temp/pre_pangenomes/{gcf}.csv',header=None)
+#     df_pre_pan = df_pre_pan.iloc[1:]
+
+#     if len(protein_families) == 0:
+
+#         protein_families = df_pre_pan.values.tolist()
+
+#     else:
+
+#         for new_protein_family in df_pre_pan.values.tolist():
+
+#             for protein_family_id, existing_protein_families in enumerate(protein_families):
+
+#                 new_fam_set = set(new_protein_family)
+#                 existing_fam_set = set(existing_protein_families)
+
+#                 if len(new_fam_set.intersection(existing_fam_set)) >= 2:
+
+#                     protein_families[protein_family_id] = list(new_fam_set.union(existing_fam_set))
+
+#                     break
+
+            
+#             protein_families.append(new_protein_family)
+
+df_pangenome = pd.DataFrame()
 
 for gcf in all_genomes_list:
 
-    df_pre_pan = pd.read_csv(f'../temp/pre_pangenomes/{gcf}.csv',header=None)
-    df_pre_pan = df_pre_pan.iloc[1:]
+    df_pre_pan = pd.read_csv(f'../temp/pre_pangenomes/{gcf}.csv')
 
-    if len(protein_families) == 0:
+    if df_pangenome.shape[0] == 0:
 
-        protein_families = df_pre_pan.values.tolist()
+        df_pangenome = df_pre_pan.copy()
+        
 
     else:
 
-        for new_protein_family in tqdm(df_pre_pan.values.tolist()):
-
-            for protein_family_id, existing_protein_families in enumerate(protein_families):
-
-                new_fam_set = set(new_protein_family)
-                existing_fam_set = set(existing_protein_families)
-
-                if len(new_fam_set.intersection(existing_fam_set)) >= 2:
-
-                    protein_families[protein_family_id] = list(new_fam_set.union(existing_fam_set))
-
-                    break
+        df_pangenome = pd.merge(df_pangenome, df_pre_pan, on=all_genomes_list, how='outer')
 
 
-print(protein_families)
+df_pangenome.to_csv(f'{args.out}pan.csv',index=None)
+
+
 
 
