@@ -25,17 +25,21 @@ except:
 
 # Generating pre-pan genomes
 
-all_genomes_list = pd.read_csv('../temp/all_genomes.txt', header=None)[0].values.tolist()
+
 all_proteins_list = pd.read_csv('../temp/all_proteins.txt', header=None)
 all_proteins_list[1] = all_proteins_list[0].apply(lambda x: x.split(';')[0])
 
 if args.genomes:
     custom_genomes_list = pd.read_csv(args.genomes, header=None)[0].values.tolist()
+    all_genomes_list = custom_genomes_list.copy()
     all_proteins_list = all_proteins_list[all_proteins_list[1].isin(custom_genomes_list)]
 
 else:
+    all_genomes_list = pd.read_csv('../temp/all_genomes.txt', header=None)[0].values.tolist()
     all_proteins_list = all_proteins_list[all_proteins_list[1].isin(all_genomes_list)]
 
+
+    
 
 for gcf1 in tqdm(all_genomes_list):
 
@@ -95,6 +99,35 @@ for gcf in tqdm(all_genomes_list):
 
 df_pre_pangenome_final_list = df_pre_pangenome_final.values.tolist()
 
+protein_families = []
 
-df_pre_pangenome_final.to_csv('../pan.csv',index=None)
+
+for new_families in tqdm(df_pre_pangenome_final_list):
+
+    new_families_set = set(new_families)
+
+    is_new_family = True
+
+
+    for fam_index, families in enumerate(protein_families):
+
+        families_set = set(families)
+
+        if len(new_families_set.intersection(families_set)) >= 2:
+
+            is_new_family = False
+            protein_families[fam_index] = list(new_families_set.union(families_set))
+
+            break
+
+
+    if is_new_family:
+
+        protein_families.append(new_families)
+
+
+df_protein_families = pd.DataFrame(protein_families)
+
+df_protein_families.to_csv('../pan.csv',index=None, header=None)
+
 
