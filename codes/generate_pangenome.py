@@ -9,6 +9,7 @@ parser = argparse.ArgumentParser(description="A script that downloads genome fil
 
 parser.add_argument("-i","--inp", type=str, help="Input folder containing input fasta files", required=True)
 parser.add_argument("-c","--core_perc", type=float, help="Relaxed cutoff for core genome", default = 100)
+parser.add_argument("-g","--genomes", type=str, help="Custom genomes list to generate pangenome of")
 parser.add_argument("-o","--out", type=str, help="Output folder", required=True)
 
 args = parser.parse_args()
@@ -24,8 +25,16 @@ except:
 
 # Generating pre-pan genomes
 
-all_genomes_list = pd.read_csv('../temp/all_genomes.txt', header=None)[0].values.tolist()[:10]
-all_proteins_list = pd.read_csv('../temp/all_proteins.txt', header=None)[0]
+all_genomes_list = pd.read_csv('../temp/all_genomes.txt', header=None)[0].values.tolist()
+all_proteins_list = pd.read_csv('../temp/all_proteins.txt', header=None)
+all_proteins_list[1] = all_proteins_list[0].apply(lambda x: x.split(';')[0])
+
+if args.genomes:
+    custom_genomes_list = pd.read_csv(args.genomes, header=None)[0].values.tolist()
+    all_proteins_list = all_proteins_list[all_proteins_list[1].isin(custom_genomes_list)]
+
+else:
+    all_proteins_list = all_proteins_list[all_proteins_list[1].isin(all_genomes_list)]
 
 
 for gcf1 in tqdm(all_genomes_list):
@@ -44,9 +53,15 @@ for gcf1 in tqdm(all_genomes_list):
 
         df_overlap = pd.merge(df_blast1, df_blast2, on=[gcf1, gcf2], how='inner')
 
-        df_duplicated = df_overlap[df_overlap[gcf1].duplicated()]
+        # Finding and removing proteins with multpiple blast hits.
 
+        df_duplicated = df_overlap[df_overlap[gcf1].duplicated()]
         df_final = df_overlap[~df_overlap[gcf1].isin(df_duplicated[gcf1])]
+
+        # Removing singletons from all proteins list to add the remaining to the final pangenome. 
+
+        all_proteins_list = all_proteins_list[~all_proteins_list[0].isin(df_final[gcf1])]
+        all_proteins_list = all_proteins_list[~all_proteins_list[0].isin(df_final[gcf2])]
         
         if pre_pangenome.shape[1] == 0:
 
@@ -78,6 +93,8 @@ for gcf in tqdm(all_genomes_list):
         df_pre_pangenome_final = pd.merge(df_pre_pangenome_final, df_pre_pangenome, on=all_genomes_list, how='outer', validate='1:1')
 
 
+df_pre_pangenome_final_list = df_pre_pangenome_final.values.tolist()
 
 
-df_pre_pangenome_final.to_csv('../pangenome.csv',index=None)
+df_pre_pangenome_final.to_csv('../pan.csv',index=None)
+
