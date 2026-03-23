@@ -8,7 +8,7 @@ import os
 parser = argparse.ArgumentParser(description="A script that downloads genome files from NCBI using the assembly accession numbers")
 
 parser.add_argument("-i","--inp", type=str, help="Input folder containing input fasta files", required=True)
-parser.add_argument("-c","--core_perc", type=float, help="Relaxed cutoff for core genome", default = 100)
+parser.add_argument("-c","--core_perc", type=int, help="Relaxed cutoff for core genome", default = 100)
 parser.add_argument("-g","--genomes", type=str, help="Custom genomes list to generate pangenome of")
 parser.add_argument("-o","--out", type=str, help="Output folder", default="../out")
 parser.add_argument("-b","--skip_blast", action="store_true", help="Skip compiling of BLAST results if it is already done once.")
@@ -18,6 +18,29 @@ args = parser.parse_args()
 logging.basicConfig(filename='app.log', level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     filemode='a')
+
+
+def generate_coregenome(protein_families, genome_list, core_perc):
+
+    new_families = []
+
+    for family in protein_families:
+
+        family = [i for i in family if str(i) != 'nan']
+        familiy_genomes = list(map(lambda x: x.split(';')[0], family))
+
+        if len(set(familiy_genomes)) < len(familiy_genomes):
+            continue
+
+        if len(set(familiy_genomes))/len(genome_list) < core_perc/100:
+
+            continue
+        else:
+
+            new_families.append(family)
+
+
+    return new_families
 
 try:
     os.mkdir('../temp/pre_pangenomes/')
@@ -33,7 +56,6 @@ if args.out == "../out":
 
 # Generating pre-pan genomes
 
-
 df_all_proteins = pd.read_csv('../temp/all_proteins.txt', header=None)
 df_all_proteins[1] = df_all_proteins[0].apply(lambda x: x.split(';')[0])
 
@@ -42,11 +64,13 @@ if args.genomes:
     all_genomes_list = custom_genomes_list.copy()
     df_all_proteins = df_all_proteins[df_all_proteins[1].isin(custom_genomes_list)]
 
+    print(all_genomes_list)
+
 else:
     all_genomes_list = pd.read_csv('../temp/all_genomes.txt', header=None)[0].values.tolist()
     df_all_proteins = df_all_proteins[df_all_proteins[1].isin(all_genomes_list)]
     
-
+    
 
 if not args.skip_blast:
     
@@ -139,3 +163,17 @@ df_protein_families = pd.concat([df_protein_families, df_all_proteins[[0]]], axi
 
 df_protein_families.to_csv(f'{args.out}pangenome.csv',index=None, header=None)
 
+
+
+core_families = generate_coregenome(protein_families, all_genomes_list, 100)
+
+df_core = pd.DataFrame(core_families)
+df_core.to_csv(f'{args.out}coregenome_100%.csv', index=None)
+
+
+if args.core_perc < 100:
+
+    core_families = generate_coregenome(protein_families, all_genomes_list, args.core_perc)
+
+    df_core = pd.DataFrame(core_families)
+    df_core.to_csv(f'{args.out}coregenome_{str(args.core_perc)}%.csv', index=None)
