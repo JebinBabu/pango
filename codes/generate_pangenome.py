@@ -11,7 +11,6 @@ parser.add_argument("-i","--inp", type=str, help="Input folder containing input 
 parser.add_argument("-c","--core_perc", type=int, help="Relaxed cutoff for core genome", default = 100)
 parser.add_argument("-g","--genomes", type=str, help="Custom genomes list to generate pangenome of")
 parser.add_argument("-o","--out", type=str, help="Output folder", default="../out")
-parser.add_argument("-b","--skip_blast", action="store_true", help="Skip compiling of BLAST results if it is already done once.")
 
 args = parser.parse_args()
 
@@ -89,44 +88,43 @@ else:
     
     
 
-if not args.skip_blast:
     
-    for gcf1 in tqdm(all_genomes_list):
+for gcf1 in tqdm(all_genomes_list):
 
-        pre_pangenome = pd.DataFrame()
+    pre_pangenome = pd.DataFrame()
 
-        for gcf2 in all_genomes_list:
+    for gcf2 in all_genomes_list:
 
-            if gcf1 == gcf2: 
-                continue
+        if gcf1 == gcf2: 
+            continue
 
-            df_blast1 = pd.read_csv(f'{args.inp}{gcf1}_vs_{gcf2}_filtered.csv')[['qseqid','sseqid']]
-            df_blast1.columns = [gcf1, gcf2]
-            df_blast2 = pd.read_csv(f'{args.inp}{gcf2}_vs_{gcf1}_filtered.csv')[['qseqid','sseqid']]
-            df_blast2.columns = [gcf2, gcf1]
+        df_blast1 = pd.read_csv(f'{args.inp}{gcf1}_vs_{gcf2}_filtered.csv')[['qseqid','sseqid']]
+        df_blast1.columns = [gcf1, gcf2]
+        df_blast2 = pd.read_csv(f'{args.inp}{gcf2}_vs_{gcf1}_filtered.csv')[['qseqid','sseqid']]
+        df_blast2.columns = [gcf2, gcf1]
 
-            df_overlap = pd.merge(df_blast1, df_blast2, on=[gcf1, gcf2], how='inner')
+        df_overlap = pd.merge(df_blast1, df_blast2, on=[gcf1, gcf2], how='inner')
 
-            # Finding and removing proteins with multpiple blast hits.
+        # Finding and removing proteins with multpiple blast hits.
 
-            df_duplicated = df_overlap[df_overlap[gcf1].duplicated()]
-            df_final = df_overlap[~df_overlap[gcf1].isin(df_duplicated[gcf1])]
+        df_duplicated = df_overlap[df_overlap[gcf1].duplicated()]
+        df_final = df_overlap[~df_overlap[gcf1].isin(df_duplicated[gcf1])]
 
-            # Removing singletons from all proteins list to add the remaining to the final pangenome. 
+        # Removing singletons from all proteins list to add the remaining to the final pangenome. 
 
-            df_all_proteins = df_all_proteins[~df_all_proteins[0].isin(df_final[gcf1])]
-            df_all_proteins = df_all_proteins[~df_all_proteins[0].isin(df_final[gcf2])]
-            
-            if pre_pangenome.shape[1] == 0:
+        df_all_proteins = df_all_proteins[~df_all_proteins[0].isin(df_final[gcf1])]
+        df_all_proteins = df_all_proteins[~df_all_proteins[0].isin(df_final[gcf2])]
+        
+        if pre_pangenome.shape[1] == 0:
 
-                pre_pangenome = df_final.copy()
+            pre_pangenome = df_final.copy()
 
-            else:
+        else:
 
-                pre_pangenome = pd.merge(pre_pangenome, df_final, on=gcf1, how="left")
+            pre_pangenome = pd.merge(pre_pangenome, df_final, on=gcf1, how="left")
 
-        pre_pangenome = pre_pangenome[all_genomes_list]
-        pre_pangenome.to_csv(f'../temp/pre_pangenomes/{gcf1}.csv', index=None)
+    pre_pangenome = pre_pangenome[all_genomes_list]
+    pre_pangenome.to_csv(f'../temp/pre_pangenomes/{gcf1}.csv', index=None)
 
 
 
