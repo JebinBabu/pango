@@ -20,27 +20,44 @@ logging.basicConfig(filename='app.log', level=logging.DEBUG,
                     filemode='a')
 
 
-def generate_coregenome(protein_families, genome_list, core_perc):
+def generate_coregenome(protein_families, genome_list, core_perc, outfolder):
 
-    new_families = []
+    with open(f"{outfolder}coregenome_{core_perc}%.csv", 'w') as core_file:
 
-    for family in protein_families:
+        new_str = ",".join(genome_list)
 
-        family = [i for i in family if str(i) != 'nan']
-        familiy_genomes = list(map(lambda x: x.split(';')[0], family))
+        core_file.write(new_str)
+        core_file.write('\n')
 
-        if len(set(familiy_genomes)) < len(familiy_genomes):
-            continue
+        for family in protein_families:
 
-        if len(set(familiy_genomes))/len(genome_list) < core_perc/100:
+            family = [i for i in family if str(i) != 'nan']
+            familiy_genomes = list(map(lambda x: x.split(';')[0], family))
 
-            continue
-        else:
+            if len(set(familiy_genomes)) < len(familiy_genomes):
+                continue
 
-            new_families.append(family)
+            if len(set(familiy_genomes))/len(genome_list) < core_perc/100:
 
+                continue
+            else:
 
-    return new_families
+                new_family = ["" for i in genome_list]
+
+                for genome_index, genome in enumerate(genome_list):
+                    for protein_id in family:
+
+                        if genome in protein_id:
+
+                            new_family[genome_index] = protein_id
+                            break
+
+            
+                new_str = ",".join(new_family)
+
+                core_file.write(new_str)
+                core_file.write('\n')
+
 
 try:
     os.mkdir('../temp/pre_pangenomes/')
@@ -64,7 +81,7 @@ if args.genomes:
     all_genomes_list = custom_genomes_list.copy()
     df_all_proteins = df_all_proteins[df_all_proteins[1].isin(custom_genomes_list)]
 
-    print(all_genomes_list)
+
 
 else:
     all_genomes_list = pd.read_csv('../temp/all_genomes.txt', header=None)[0].values.tolist()
@@ -165,15 +182,9 @@ df_protein_families.to_csv(f'{args.out}pangenome.csv',index=None, header=None)
 
 
 
-core_families = generate_coregenome(protein_families, all_genomes_list, 100)
-
-df_core = pd.DataFrame(core_families)
-df_core.to_csv(f'{args.out}coregenome_100%.csv', index=None)
+generate_coregenome(protein_families, all_genomes_list, 100, args.out)
 
 
 if args.core_perc < 100:
 
-    core_families = generate_coregenome(protein_families, all_genomes_list, args.core_perc)
-
-    df_core = pd.DataFrame(core_families)
-    df_core.to_csv(f'{args.out}coregenome_{str(args.core_perc)}%.csv', index=None)
+    generate_coregenome(protein_families, all_genomes_list, args.core_perc, args.out)
