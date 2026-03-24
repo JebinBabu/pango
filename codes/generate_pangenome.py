@@ -30,6 +30,7 @@ def generate_coregenome(protein_families, genome_list, core_perc, outfolder):
 
         core_file.write(new_str)
         core_file.write('\n')
+        core_count = 0
 
         for family in protein_families:
 
@@ -59,6 +60,10 @@ def generate_coregenome(protein_families, genome_list, core_perc, outfolder):
 
                 core_file.write(new_str)
                 core_file.write('\n')
+                core_count += 1
+
+        logging.info(f"Found {core_count} protein families in the core genome")
+    
 
 
 try:
@@ -188,15 +193,18 @@ if not args.coregenome:
 
     df_protein_families.to_csv(f'{args.out}pangenome.csv',index=None, header=None)
 
+logging.info(f"Ran pango on {len(all_genomes_list)} genomes")
+
 
 
 if not args.coregenome:
-    protein_families = protein_families.copy()
+    protein_families = df_protein_families.values.tolist()
 
 else:
     df_pangenome = pd.read_csv(args.pan, header=None,dtype=str)
     protein_families = df_pangenome.values.tolist()
 
+logging.info(f"Found {len(protein_families)} protein families in the pan genome")
 
 
 generate_coregenome(protein_families, all_genomes_list, args.core_perc, args.out)
