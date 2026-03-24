@@ -10,7 +10,7 @@ parser = argparse.ArgumentParser(description="A script that downloads genome fil
 parser.add_argument("-i","--inp", type=str, help="Input folder containing input fasta files", required=True)
 parser.add_argument("-cp","--core_perc", type=int, help="Relaxed cutoff for core genome", default = 100)
 parser.add_argument("-g","--genomes", type=str, help="Custom genomes list to generate pangenome of")
-parser.add_argument("-o","--out", type=str, help="Output folder", default="../out")
+parser.add_argument("-o","--out", type=str, help="Output folder", default="../out/")
 parser.add_argument("--coregenome", action="store_true", help="Only generate coregenome")
 parser.add_argument('-p',"--pan", type=str, help="Path to pangenome if skip_pan is used")
 
@@ -66,7 +66,7 @@ try:
 except:
     True
 
-if args.out == "../out":
+if args.out == "../out/":
     try:
         os.mkdir('../out/')
     except:
