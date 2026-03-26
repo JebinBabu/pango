@@ -29,7 +29,7 @@ except:
 
 with open("../temp/all_proteins.txt",'w') as all_proteins, open("../temp/all_genomes.txt",'w') as all_genomes:
 
-    # all_proteins.write(f'accession, protein_new_name, details\n')
+    all_proteins.write(f'protein_new_name, protein_old_name\n')
 
     for file in tqdm(fasta_files):
 
@@ -54,8 +54,8 @@ with open("../temp/all_proteins.txt",'w') as all_proteins, open("../temp/all_gen
                     protein_name = f"{gcf_spliced};protein_{count}"
 
                     outfile.write(f">{protein_name}\n")
-                    # all_proteins.write(f"{gcf_spliced}, {protein_name}, {line.split(' ')[0]}\n")
-                    all_proteins.write(f"{protein_name}\n")
+                    all_proteins.write(f"{protein_name}, {line.split(' ')[0]}\n")
+                    # all_proteins.write(f"{protein_name}\n")
                     count += 1
                     continue
 
