@@ -85,7 +85,8 @@ if args.coregenome:
 
 # Generating pre-pan genomes
 
-df_all_proteins = pd.read_csv('../temp/all_proteins.txt', header=None)
+df_all_proteins = pd.read_csv('../temp/all_proteins.txt', header=None)[['protein_new_name']]
+df_all_proteins.columns = [0]
 df_all_proteins[1] = df_all_proteins[0].apply(lambda x: x.split(';')[0])
 
 if args.genomes:
