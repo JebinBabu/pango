@@ -1,0 +1,12 @@
+general:
+  species_name:
+  reference_genome: GCF_000009045.1_ASM904v1
+  mol_type: nucl
+  species_list: /home/jebin/JB/Projects/pango/codes/gcfs_b_subtilis_5.txt
+blast:
+  num_threads: 1
+pango:
+  pident: 75
+  length_coverage: 75
+  evalue: 1e-5
+  relaxed_core: 100
