@@ -43,7 +43,7 @@ for acc in tqdm(accessions):
     acc3 = acc[7:10]
     acc4 = acc[10:13]
 
-    new_filename = acc + file_types_final[args.type]
+    new_filename = acc + file_types[args.type]
 
     url = f"https://ftp.ncbi.nlm.nih.gov/genomes/all/{acc1}/{acc2}/{acc3}/{acc4}/{acc}/{new_filename}"
 
@@ -51,7 +51,7 @@ for acc in tqdm(accessions):
 
     if response.status_code == 200:
 
-        with open(args.out + new_filename,"wb") as new_file:
+        with open(args.out + new_filename.replace(file_types[args.type],file_types_final[args.type]),"wb") as new_file:
 
             new_file.write(response.content)
 
