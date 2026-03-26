@@ -1,6 +1,38 @@
-configfile: "path/to/config.yaml"
+configfile: "config.yaml"
+
+ref_genome_0 = "_".join(config['general']['reference_genome'].split('_')[:2])
+file_type = {"nucl":".fna", "prot":'.faa'}
 
 rule download_genomes:
-    input: 
-    output:
-    shell: "python3 download_files.py --inp gcfs_b_subtilis.txt --type nucl -o ../genomes/"
+    output: 
+        f"../genome_fasta/{config['general']['reference_genome']}{file_type[config['general']['mol_type']]}"
+    shell: """
+    python3 download_files.py --inp {config[general][species_list]} --type {config[general][mol_type]} -o ../genome_fasta/
+    gunzip ../genome_fasta/*.gz
+    """
+
+rule parse_genomes:
+    input: f"../genome_fasta/{config['general']['reference_genome']}{file_type[config['general']['mol_type']]}"
+    output: f"../genome_fasta_parsed/{ref_genome_0}.fna"
+    shell: f"python3 parse_fasta_files.py --inp ../genome_fasta/ --ext {file_type[config['general']['mol_type']]} --out ../genome_fasta_parsed/"
+
+rule blast:
+    input: f"../genome_fasta_parsed/{ref_genome_0}.fna"
+    output: "blasted.snaketemp"
+    shell: f"""
+    python3 all_vs_all_blast.py --inp ../genome_fasta_parsed/ --ext {file_type[config['general']['mol_type']]} --blast_type {config['general']['mol_type']} --threads {config['blast']['num_threads']} --out ../blastresults/
+    touch blasted.snaketemp
+    """
+
+rule filter_blast:
+    input: "blasted.snaketemp"
+    output: "filtered_blast.snaketemp"
+    shell: """
+    python3 filter_blast.py --inp ../blastresults/ -e {config[pango][evalue]} -p {config[pango][pident]} -l {config[pango][length_coverage]}
+    touch filtered_blast.snaketemp
+    """
+
+rule run_pango:
+    input: "filtered_blast.snaketemp"
+    output: "../out/pangenome.csv"
+    shell: "python3 pango.py --inp ../blastresults/ -cp {config[pango][relaxed_core]} -o ../out/"
