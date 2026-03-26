@@ -30,6 +30,7 @@ with open(args.inp, "r") as infile:
             accessions.append(line)
 
 file_types = {"nucl":"_cds_from_genomic.fna.gz","prot":"_protein.faa.gz"}
+file_types_final = {"nucl":".fna.gz","prot":".faa.gz"}
 
 logging.info(f"Downloading {len(accessions)} {args.type} files!")
 
@@ -42,7 +43,7 @@ for acc in tqdm(accessions):
     acc3 = acc[7:10]
     acc4 = acc[10:13]
 
-    new_filename = acc + file_types[args.type]
+    new_filename = acc + file_types_final[args.type]
 
     url = f"https://ftp.ncbi.nlm.nih.gov/genomes/all/{acc1}/{acc2}/{acc3}/{acc4}/{acc}/{new_filename}"
 
