@@ -1,0 +1,6 @@
+configfile: "path/to/config.yaml"
+
+rule download_genomes:
+    input: 
+    output:
+    shell: "python3 download_files.py --inp gcfs_b_subtilis.txt --type nucl -o ../genomes/"
