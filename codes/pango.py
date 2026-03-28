@@ -24,7 +24,7 @@ logging.basicConfig(filename='app.log', level=logging.DEBUG,
 
 def generate_coregenome(protein_families, genome_list, core_perc, outfolder):
 
-    with open(f"{outfolder}coregenome_{core_perc}%.csv", 'w') as core_file:
+    with open(f"{outfolder}coregenome_g{len(genome_list)}_{core_perc}%.csv", 'w') as core_file:
 
         new_str = ",".join(genome_list)
 
@@ -192,7 +192,7 @@ if not args.coregenome:
     df_protein_families = pd.DataFrame(protein_families,columns=None)
     df_protein_families = pd.concat([df_protein_families, df_all_proteins[[0]]], axis=0)
 
-    df_protein_families.to_csv(f'{args.out}pangenome.csv',index=None, header=None)
+    df_protein_families.to_csv(f'{args.out}pangenome_g{len(all_genomes_list)}.csv',index=None, header=None)
 
 logging.info(f"Ran pango on {len(all_genomes_list)} genomes")
 
