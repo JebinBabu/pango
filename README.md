@@ -5,9 +5,17 @@ A bioinformatic pipeline for constructing pan/core genome and phylogenetic tree 
 
 Pango is a bioinformatics pipeline implemented in Python and orchestrated with Snakemake for the construction of pan-genomes and core genomes. It employs an all-vs-all reciprocal BLAST strategy to identify gene homologs across input genomes, providing a robust and sensitive approach to homology detection. As a result, runtime is primarily determined by BLAST computation, which scales with the number and size of input sequences. All auxiliary processing steps are implemented using vectorized pandas operations, ensuring efficient and scalable data handling throughout the pipeline.
 
-Pango does not include proteins having multiple BLAST hits to avoid possible errors in the constructed pan/core genomes.
-
 ### Usage 
+
+**Steps to run the pipeline:** 
+
+1. copy the `codes` folder to the working directory (Ideally a directory for a species). 
+2. Make a list of genome accessions to be used.
+3. Give necessary permissions to the shell scripts for creating necessary folders.
+4. Set up the `config.yaml` file.
+5. Set up the conda environment using the `environment.yml` file.
+5. Run `make_folders.sh`
+6. Run the pipeline using snakemake.
 
 **Snakemake command:**
 ```bash
@@ -22,7 +30,7 @@ general:
   species_name: B_subtilis
   reference_genome: GCF_000009045.1_ASM904v1
   mol_type: nucl
-  species_list: /home/pango/analysis/M_pneumoniae/B_subtilis.txt
+  species_list: /home/pango/analysis/B_subtilis/B_subtilis.txt
 blast:
   num_threads: 1
 pango:
@@ -44,6 +52,8 @@ pango:
 | `evalue `         |float||evalue to determine homology after running BLAST|
 | `relaxed_core `         |float||For generating relaxed core genome|
 
+### The pipeline
+Pango does not include proteins having multiple BLAST hits to avoid possible errors in the constructed pan/core genomes.
 ### Example run
 
 blastresults no included
@@ -51,3 +61,5 @@ blastresults no included
 Bacterial lifestyle shapes pangenomes
 The consequences of genetic drift for bacterial genome complexity
 Factors driving effective population size and pan-genome evolution in bacteria
+
+**Claude.ai used for paraphrasing this README*
