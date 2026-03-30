@@ -7,9 +7,9 @@ Pango is a bioinformatics pipeline implemented in Python and orchestrated with S
 
 ### Benchmarking
 
-The pan-genome of a species provides critical insights into its biology and evolutionary history. The environment a species inhabits shapes its population dynamics, which in turn drives modifications to its gene pool. Species occupying a broad range of habitats tend to accumulate a larger repertoire of genes, whereas obligate parasites undergo genome reduction as an adaptation to their specific host niche [2, 4]. Additional factors influencing gene pool composition include effective population size and genetic drift [3]. Consequently, characterising the pan-genome and core genome has become an integral component of population genetics and evolutionary studies.
+The pan-genome of a species provides critical insights into its biology and evolutionary history. The environment a species inhabits shapes its population dynamics, which in turn drives modifications to its gene pool. Species occupying a broad range of habitats tend to accumulate a larger repertoire of genes, whereas obligate parasites undergo genome reduction as an adaptation to their specific host niche [1, 2]. Additional factors influencing gene pool composition include effective population size and genetic drift [3]. Consequently, characterising the pan-genome and core genome has become an integral component of population genetics and evolutionary studies.
 
-To benchmark Pango, I selected four well-characterised bacterial species, each represented by more than 90 complete genomes annotated in the NCBI RefSeq database. Two facultative pathogens (Escherichia coli and Bacillus subtilis) and two obligate pathogens (Mycoplasmoides pneumoniae and Helicobacter pylori) were chosen to capture the contrasting trends expected in pan-genome and core genome architecture. Pan-genomes and core genomes were constructed by incrementally sampling from 10 to 90 strains, with five independent random samplings performed at each interval. In a complementary analysis, gene frequency distributions were examined at a fixed strain count. Together, these analyses provide a framework for interpreting the distinct evolutionary trajectories and gene pool dynamics characteristic of each bacterial lifestyle [1].
+To benchmark Pango, I selected four well-characterised bacterial species, each represented by more than 90 complete genomes annotated in the NCBI RefSeq database. Two facultative pathogens (Escherichia coli and Bacillus subtilis) and two obligate pathogens (Mycoplasmoides pneumoniae and Helicobacter pylori) were chosen to capture the contrasting trends expected in pan-genome and core genome architecture. Pan-genomes and core genomes were constructed by incrementally sampling from 10 to 90 strains, with five independent random samplings performed at each interval. In a complementary analysis, gene frequency distributions were examined at a fixed strain count. Together, these analyses provide a framework for interpreting the distinct evolutionary trajectories and gene pool dynamics characteristic of each bacterial lifestyle [4].
 
 ### Usage 
 
@@ -62,12 +62,12 @@ pango:
 Pango does not include proteins having multiple BLAST hits to avoid possible errors in the constructed pan/core genomes.
 ### Example run
 
-blastresults no included
+blastresults not included
 
-1. Genome rearrangements and selection in multi-chromosome bacteria Burkholderia spp.
-2. Bacterial lifestyle shapes pangenomes
+1. Bacterial lifestyle shapes pangenomes
+2. Factors driving effective population size and pan-genome evolution in bacteria
 3. The consequences of genetic drift for bacterial genome complexity
-4. Factors driving effective population size and pan-genome evolution in bacteria
+4. Genome rearrangements and selection in multi-chromosome bacteria Burkholderia spp.
 
 How to read outfiles, pan and core genomes
 
