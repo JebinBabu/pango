@@ -5,6 +5,12 @@ A bioinformatic pipeline for constructing pan/core genome and phylogenetic tree 
 
 Pango is a bioinformatics pipeline implemented in Python and orchestrated with Snakemake for the construction of pan-genomes and core genomes. It employs an all-vs-all reciprocal BLAST strategy to identify gene homologs across input genomes, providing a robust and sensitive approach to homology detection. As a result, runtime is primarily determined by BLAST computation, which scales with the number and size of input sequences. All auxiliary processing steps are implemented using vectorized pandas operations, ensuring efficient and scalable data handling throughout the pipeline.
 
+### Benchmarking
+
+The pan-genome of a species provides critical insights into its biology and evolutionary history. The environment a species inhabits shapes its population dynamics, which in turn drives modifications to its gene pool. Species occupying a broad range of habitats tend to accumulate a larger repertoire of genes, whereas obligate parasites undergo genome reduction as an adaptation to their specific host niche [2, 4]. Additional factors influencing gene pool composition include effective population size and genetic drift [3]. Consequently, characterising the pan-genome and core genome has become an integral component of population genetics and evolutionary studies.
+
+To benchmark Pango, I selected four well-characterised bacterial species, each represented by more than 90 complete genomes annotated in the NCBI RefSeq database. Two facultative pathogens (Escherichia coli and Bacillus subtilis) and two obligate pathogens (Mycoplasmoides pneumoniae and Helicobacter pylori) were chosen to capture the contrasting trends expected in pan-genome and core genome architecture. Pan-genomes and core genomes were constructed by incrementally sampling from 10 to 90 strains, with five independent random samplings performed at each interval. In a complementary analysis, gene frequency distributions were examined at a fixed strain count. Together, these analyses provide a framework for interpreting the distinct evolutionary trajectories and gene pool dynamics characteristic of each bacterial lifestyle [1].
+
 ### Usage 
 
 **Steps to run the pipeline:** 
@@ -58,8 +64,11 @@ Pango does not include proteins having multiple BLAST hits to avoid possible err
 
 blastresults no included
 
-Bacterial lifestyle shapes pangenomes
-The consequences of genetic drift for bacterial genome complexity
-Factors driving effective population size and pan-genome evolution in bacteria
+1. Genome rearrangements and selection in multi-chromosome bacteria Burkholderia spp.
+2. Bacterial lifestyle shapes pangenomes
+3. The consequences of genetic drift for bacterial genome complexity
+4. Factors driving effective population size and pan-genome evolution in bacteria
+
+How to read outfiles, pan and core genomes
 
 **Claude.ai used for paraphrasing this README*
