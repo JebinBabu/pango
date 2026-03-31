@@ -11,6 +11,11 @@ The pan-genome of a species provides critical insights into its biology and evol
 
 To benchmark Pango, I selected four well-characterised bacterial species, each represented by more than 90 complete genomes annotated in the NCBI RefSeq database. Two facultative pathogens (Escherichia coli and Bacillus subtilis) and two obligate pathogens (Mycoplasmoides pneumoniae and Helicobacter pylori) were chosen to capture the contrasting trends expected in pan-genome and core genome architecture. Pan-genomes and core genomes were constructed by incrementally sampling from 10 to 90 strains, with five independent random samplings performed at each interval. In a complementary analysis, gene frequency distributions were examined at a fixed strain count. Together, these analyses provide a framework for interpreting the distinct evolutionary trajectories and gene pool dynamics characteristic of each bacterial lifestyle.
 
+<p align="center">
+  <img src="./analysis/pan.png" width="300"/>
+  <img src="./analysis/core.png" width="300"/>
+</p>
+
 ### Usage 
 
 **Steps to run the pipeline:** 
@@ -58,21 +63,16 @@ pango:
 | `evalue `         |float||evalue to determine homology after running BLAST|
 | `relaxed_core `         |float||For generating relaxed core genome|
 
-### The pipeline
-Pango does not include proteins having multiple BLAST hits to avoid possible errors in the constructed pan/core genomes.
-### Example run
+**Restarting the pipeline:**
 
-blastresults not included
+If you run into any error or need to restart the pipeline, run the `revert_snakemake.sh` script, which deletes all the temporary folders and files created by the pipeline.
 
-1. Bacterial lifestyle shapes pangenomes
-2. Factors driving effective population size and pan-genome evolution in bacteria
-3. The consequences of genetic drift for bacterial genome complexity
-4. Producing polished prokaryotic pangenomes with the Panaroo pipeline
-5. Roary: rapid large-scale prokaryote pan genome analysis
 
-How to read outfiles, pan and core genomes
-Correct pan output file name snakemake errors
-Integrate makefolder to pipeline
-change snaketemp naming
+### References
+1. Dewar AE, Hao C, Belcher LJ, Ghoul M, West SA. Bacterial lifestyle shapes pangenomes. *Proc Natl Acad Sci U S A*. 2024 May 21;121(21):e2320170121.
+2. Bobay LM, Ochman H. Factors driving effective population size and pan-genome evolution in bacteria. *BMC Evol Biol.* 2018 Oct 12;18(1):153.
+3. Kuo CH, Moran NA, Ochman H. The consequences of genetic drift for bacterial genome complexity. *Genome Res.* 2009 Aug;19(8):1450-4.
+4. Tonkin-Hill G, MacAlasdair N, Ruis C, Weimann A, Horesh G, Lees JA, Gladstone RA, Lo S, Beaudoin C, Floto RA, Frost SDW, Corander J, Bentley SD, Parkhill J. Producing polished prokaryotic pangenomes with the Panaroo pipeline.*Genome Biol.* 2020 Jul 22;21(1):180.
+5. Page AJ, Cummins CA, Hunt M, Wong VK, Reuter S, Holden MT, Fookes M, Falush D, Keane JA, Parkhill J. Roary: rapid large-scale prokaryote pan genome analysis. *Bioinformatics.* 2015 Nov 15;31(22):3691-3.
 
 **Claude.ai used for paraphrasing this README*
