@@ -9,12 +9,20 @@ Pango is a bioinformatics pipeline implemented in Python and orchestrated with S
 
 The pan-genome of a species provides critical insights into its biology and evolutionary history. The environment a species inhabits shapes its population dynamics, which in turn drives modifications to its gene pool. Species occupying a broad range of habitats tend to accumulate a larger repertoire of genes, whereas obligate parasites undergo genome reduction as an adaptation to their specific host niche. Additional factors influencing gene pool composition include effective population size and genetic drift. Consequently, characterising the pan-genome and core genome has become an integral component of population genetics and evolutionary studies.
 
-To benchmark Pango, I selected four well-characterised bacterial species, each represented by more than 90 complete genomes annotated in the NCBI RefSeq database. Two facultative pathogens (Escherichia coli and Bacillus subtilis) and two obligate pathogens (Mycoplasmoides pneumoniae and Helicobacter pylori) were chosen to capture the contrasting trends expected in pan-genome and core genome architecture. Pan-genomes and core genomes were constructed by incrementally sampling from 10 to 90 strains, with five independent random samplings performed at each interval. In a complementary analysis, gene frequency distributions were examined at a fixed strain count. Together, these analyses provide a framework for interpreting the distinct evolutionary trajectories and gene pool dynamics characteristic of each bacterial lifestyle.
+To benchmark Pango, I selected four well-characterised bacterial species, each represented by more than 90 complete genomes annotated in the NCBI RefSeq database. Two facultative pathogens (Escherichia coli and Bacillus subtilis) and two obligate pathogens (Mycoplasmoides pneumoniae and Helicobacter pylori) were chosen to capture the contrasting trends expected in pan-genome and core genome architecture. Pan-genomes and core genomes were constructed by incrementally sampling from 10 to 90 strains, with five independent random samplings performed at each interval (Fig. 1,2). This analyses provide a framework for interpreting the distinct evolutionary trajectories and gene pool dynamics characteristic of each bacterial lifestyle.
 
-<p align="center">
-  <img src="./benchmarking/pan.png" width="300"/>
-  <img src="./benchmarking/core.png" width="300"/>
-</p>
+<table style="border:none">
+  <tr style="border:none">
+    <td style="border:none; padding:1px">
+      <img src="./benchmarking/pan.png" width="100%"/>
+      <figcaption style="text-align:center;font-size:12px">Fig. 1</figcaption>
+    </td>
+    <td style="border:none; padding:1px">
+      <img src="./benchmarking/core.png" width="100%"/>
+      <figcaption style="text-align:center;font-size:12px">Fig. 2</figcaption>
+    </td>
+  </tr>
+</table>
 
 ### Usage 
 
