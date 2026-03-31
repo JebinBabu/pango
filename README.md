@@ -12,8 +12,8 @@ The pan-genome of a species provides critical insights into its biology and evol
 To benchmark Pango, I selected four well-characterised bacterial species, each represented by more than 90 complete genomes annotated in the NCBI RefSeq database. Two facultative pathogens (Escherichia coli and Bacillus subtilis) and two obligate pathogens (Mycoplasmoides pneumoniae and Helicobacter pylori) were chosen to capture the contrasting trends expected in pan-genome and core genome architecture. Pan-genomes and core genomes were constructed by incrementally sampling from 10 to 90 strains, with five independent random samplings performed at each interval. In a complementary analysis, gene frequency distributions were examined at a fixed strain count. Together, these analyses provide a framework for interpreting the distinct evolutionary trajectories and gene pool dynamics characteristic of each bacterial lifestyle.
 
 <p align="center">
-  <img src="./analysis/pan.png" width="300"/>
-  <img src="./analysis/core.png" width="300"/>
+  <img src="./benchmarking/pan.png" width="300"/>
+  <img src="./benchmarking/core.png" width="300"/>
 </p>
 
 ### Usage 
